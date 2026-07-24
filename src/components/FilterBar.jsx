@@ -1,9 +1,12 @@
-function FilterBar() {
+function FilterBar({ category, setCategory, fetchJoke }) {
   return (
     <div className="filter-bar">
-      <label htmlFor="category">Category:</label>
+      <label>Category:</label>
 
-      <select id="category">
+      <select
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+      >
         <option value="Programming">Programming</option>
         <option value="Misc">Misc</option>
         <option value="Dark">Dark</option>
@@ -13,7 +16,9 @@ function FilterBar() {
         <option value="Any">Any</option>
       </select>
 
-      <button>Get Joke</button>
+      <button onClick={() => fetchJoke(category)}>
+        Get Joke
+      </button>
     </div>
   );
 }

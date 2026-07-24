@@ -5,10 +5,34 @@ function useJokes() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  const fetchJoke = async (category) => {
+    setLoading(true);
+    setError("");
+
+    try {
+      const response = await fetch(
+        `https://v2.jokeapi.dev/joke/${category}`
+      );
+
+      const data = await response.json();
+
+      if (data.error) {
+        throw new Error(data.message);
+      }
+
+      setJoke(data);
+    } catch (err) {
+      setError("Failed to fetch a joke.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return {
     joke,
     loading,
     error,
+    fetchJoke,
   };
 }
 

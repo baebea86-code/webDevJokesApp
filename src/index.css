@@ -5,6 +5,100 @@
 }
 
 body {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.app {
+  width: 100%;
+  max-width: 700px;
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.2);
+}
+
+h1 {
+  text-align: center;
+  color: #4f46e5;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-bar label {
+  font-weight: bold;
+}
+
+.filter-bar select {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  font-size: 15px;
+}
+
+.filter-bar button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.filter-bar button:hover {
+  background: #4338ca;
+}
+
+.joke-card {
+  background: #f8f8ff;
+  border-left: 6px solid #4f46e5;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.joke-card h2 {
+  color: #4f46e5;
+  margin-bottom: 15px;
+}
+
+.joke-card p {
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.spinner {
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  color: #4f46e5;
+}
+
+.error {
+  background: #ffe6e6;
+  color: #c0392b;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: center;
 }
