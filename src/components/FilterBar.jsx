@@ -9,7 +9,6 @@ function FilterBar({ category, setCategory, fetchJoke }) {
       >
         <option value="Programming">Programming</option>
         <option value="Misc">Misc</option>
-        <option value="Dark">Dark</option>
         <option value="Pun">Pun</option>
         <option value="Spooky">Spooky</option>
         <option value="Christmas">Christmas</option>
