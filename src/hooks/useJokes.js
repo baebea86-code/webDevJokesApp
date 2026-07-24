@@ -11,7 +11,7 @@ function useJokes() {
 
     try {
       const response = await fetch(
-        `https://v2.jokeapi.dev/joke/${category}`
+        `https://v2.jokeapi.dev/${category}`
       );
 
       const data = await response.json();
